@@ -1,0 +1,1695 @@
+W0611 21:38:22.167000 1172776 torch/distributed/run.py:792] 
+W0611 21:38:22.167000 1172776 torch/distributed/run.py:792] *****************************************
+W0611 21:38:22.167000 1172776 torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0611 21:38:22.167000 1172776 torch/distributed/run.py:792] *****************************************
+[INFO:swift] Successfully registered `/home/Userlist/kongzicheng/omni-critic-r1/ms-swift-main/swift/llm/dataset/data/dataset_info.json`.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+[2025-06-11 21:38:31,511] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+[2025-06-11 21:38:31,758] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+[2025-06-11 21:38:31,796] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-11 21:38:31,836] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+[INFO:swift] rank: 0, local_rank: 0, world_size: 6, local_world_size: 6
+[INFO:swift] Loading the model using model_dir: /home/kongzicheng/.cache/modelscope/hub/models/Qwen/Qwen2.5-Omni-3B
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+[INFO:swift] freeze_parameters: ['thinker.audio_tower', 'thinker.visual', 'thinker.audio_tower.proj', 'thinker.visual.merger', 'talker', 'token2wav']
+[INFO:swift] Using deepspeed: {'train_batch_size': 'auto', 'gradient_accumulation_steps': 'auto', 'optimizer': {'type': 'AdamW', 'params': {'lr': 'auto', 'weight_decay': 'auto', 'betas': [0.9, 0.95], 'torch_adam': True}}, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True}, 'offload_param': {'device': 'cpu', 'pin_memory': True}, 'contiguous_gradients': True, 'overlap_comm': True, 'reduce_bucket_size': 50000000.0, 'allgather_bucket_size': 200000000.0, 'round_robin_gradients': True}, 'bf16': {'enabled': True, 'loss_scale_window': 100}, 'gradient_clipping': 1.0}
+[INFO:swift] Setting args.lazy_tokenize: True
+[2025-06-11 21:38:31,907] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-11 21:38:31,940] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-11 21:38:33,176] [INFO] [comm.py:675:init_distributed] cdb=None
+[2025-06-11 21:38:33,389] [INFO] [comm.py:675:init_distributed] cdb=None
+[2025-06-11 21:38:33,468] [INFO] [comm.py:675:init_distributed] cdb=None
+[2025-06-11 21:38:33,602] [INFO] [comm.py:675:init_distributed] cdb=None
+[2025-06-11 21:38:33,712] [INFO] [comm.py:675:init_distributed] cdb=None
+[2025-06-11 21:38:33,765] [INFO] [comm.py:675:init_distributed] cdb=None
+[2025-06-11 21:38:33,765] [INFO] [comm.py:706:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[INFO:swift] output_dir: /home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/outputs/v4-20250611-213834
+[INFO:swift] Global seed set to 42
+[INFO:swift] args: TrainArguments(
+_n_gpu=-1,
+acc_steps=1,
+acc_strategy=token,
+accelerator_config={'dispatch_batches': False},
+adafactor=False,
+adalora_beta1=0.85,
+adalora_beta2=0.85,
+adalora_deltaT=1,
+adalora_init_r=12,
+adalora_orth_reg_weight=0.5,
+adalora_target_r=8,
+adalora_tfinal=0,
+adalora_tinit=0,
+adam_beta1=0.9,
+adam_beta2=0.95,
+adam_epsilon=1e-08,
+adapter_act=gelu,
+adapter_length=128,
+adapters=[],
+add_version=True,
+agent_template=None,
+aligner_lr=None,
+attn_impl=None,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=True,
+bf16_full_eval=False,
+bnb_4bit_compute_dtype=torch.bfloat16,
+bnb_4bit_quant_storage=None,
+bnb_4bit_quant_type=nf4,
+bnb_4bit_use_double_quant=True,
+boft_block_num=0,
+boft_block_size=4,
+boft_dropout=0.0,
+boft_n_butterfly_factor=1,
+channels=None,
+check_model=True,
+ckpt_dir=None,
+columns={},
+create_checkpoint_symlink=False,
+custom_dataset_info=[],
+custom_register_path=[],
+data_seed=42,
+dataloader_drop_last=False,
+dataloader_num_workers=8,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+dataset=['/home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/sft_dataset/audio/sft_data.jsonl', '/home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/sft_dataset/image/sft_data.jsonl'],
+dataset_num_proc=1,
+dataset_shuffle=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=18000000,
+debug=None,
+deepspeed={'train_batch_size': 'auto', 'gradient_accumulation_steps': 'auto', 'optimizer': {'type': 'AdamW', 'params': {'lr': 'auto', 'weight_decay': 'auto', 'betas': [0.9, 0.95], 'torch_adam': True}}, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True}, 'offload_param': {'device': 'cpu', 'pin_memory': True}, 'contiguous_gradients': True, 'overlap_comm': True, 'reduce_bucket_size': 50000000.0, 'allgather_bucket_size': 200000000.0, 'round_robin_gradients': True}, 'bf16': {'enabled': True, 'loss_scale_window': 100}, 'gradient_clipping': 1.0},
+device_map=None,
+disable_tqdm=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+download_mode=reuse_dataset_if_exists,
+eval_accumulation_steps=None,
+eval_datasets=[],
+eval_datasets_args=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_generation_config=None,
+eval_limit=None,
+eval_on_start=False,
+eval_steps=100.0,
+eval_strategy=steps,
+eval_use_evalscope=False,
+eval_use_gather_object=False,
+external_plugins=[],
+fourier_n_frequency=2000,
+fourier_scaling=300.0,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fps=1.0,
+fps_max_frames=35,
+freeze_aligner=True,
+freeze_llm=False,
+freeze_parameters=['thinker.audio_tower', 'thinker.visual', 'thinker.audio_tower.proj', 'thinker.visual.merger', 'talker', 'token2wav'],
+freeze_parameters_ratio=0.0,
+freeze_parameters_regex=None,
+freeze_vit=True,
+fsdp=,
+fsdp_config=None,
+fsdp_min_num_params=0,
+fsdp_num=1,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+galore_cos_threshold=0.4,
+galore_gamma_proj=2,
+galore_optim_per_parameter=False,
+galore_proj_bits=4,
+galore_proj_group_size=256,
+galore_proj_quant=False,
+galore_proj_type=std,
+galore_quantization=False,
+galore_queue_size=5,
+galore_rank=128,
+galore_scale=1.0,
+galore_target_modules=None,
+galore_update_proj_gap=50,
+galore_with_embedding=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=4,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hqq_axis=None,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_args_error=False,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+init_strategy=None,
+init_weights=True,
+interleave_prob=None,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+lazy_tokenize=True,
+learning_rate=3e-06,
+length_column_name=length,
+lisa_activated_layers=0,
+lisa_step_interval=20,
+llamapro_num_groups=None,
+llamapro_num_new_blocks=4,
+load_args=False,
+load_best_model_at_end=False,
+load_data_args=False,
+load_from_cache_file=True,
+local_rank=0,
+local_repo_path=None,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/outputs/v4-20250611-213834/runs,
+logging_first_step=True,
+logging_nan_inf_filter=True,
+logging_steps=5,
+logging_strategy=steps,
+logprobs=False,
+lora_alpha=32,
+lora_bias=none,
+lora_dropout=0.05,
+lora_dtype=None,
+lora_ga_batch_size=2,
+lora_ga_direction=ArB2r,
+lora_ga_iters=2,
+lora_ga_max_length=1024,
+lora_ga_scale=stable,
+lora_ga_stable_gamma=16,
+lora_modules=[],
+lora_rank=8,
+lorap_lr_ratio=None,
+loss_scale=default,
+loss_type=None,
+lr_scheduler_kwargs=None,
+lr_scheduler_type=cosine,
+max_epochs=None,
+max_grad_norm=1.0,
+max_length=4000,
+max_memory={},
+max_new_tokens=64,
+max_pixels=None,
+max_steps=-1,
+metric=None,
+metric_for_best_model=loss,
+metric_warmup_step=0,
+model=/home/kongzicheng/.cache/modelscope/hub/models/Qwen/Qwen2.5-Omni-3B,
+model_author=None,
+model_kwargs={},
+model_name=None,
+model_revision=None,
+model_type=qwen2_5_omni,
+modules_to_save=[],
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+norm_bbox=None,
+num_beams=1,
+num_labels=None,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+optimizer=None,
+output_dir=/home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/outputs/v4-20250611-213834,
+overwrite_output_dir=False,
+packing=False,
+packing_cache=None,
+padding_free=False,
+padding_side=right,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+predict_with_generate=False,
+prediction_loss_only=False,
+problem_type=None,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+quant_bits=None,
+quant_method=None,
+ray_scope=last,
+reft_args=None,
+reft_intervention_type=LoreftIntervention,
+reft_layer_key=None,
+reft_layers=None,
+reft_rank=4,
+remove_unused_columns=True,
+repetition_penalty=None,
+report_to=['tensorboard'],
+response_prefix=None,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+resume_only_model=False,
+rope_scaling=None,
+run_name=/home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/outputs/v4-20250611-213834,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=100.0,
+save_strategy=steps,
+save_total_limit=3,
+seed=42,
+sequence_parallel_size=1,
+shuffle_buffer_size=1000,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_dataset_ratio=0.01,
+stop_words=[],
+stopping_strategy=first_exhausted,
+stream=False,
+streaming=False,
+strict=False,
+swanlab_exp_name=None,
+swanlab_mode=cloud,
+swanlab_project=None,
+swanlab_token=<SWANLAB_TOKEN>,
+swanlab_workspace=None,
+system=None,
+target_modules=['all-linear'],
+target_regex=None,
+task_type=causal_lm,
+temperature=0.0,
+template=qwen2_5_omni,
+template_backend=swift,
+tf32=None,
+top_k=None,
+top_logprobs=None,
+top_p=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_dtype=torch.bfloat16,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_dataloader_shuffle=True,
+train_type=full,
+trainable_parameters=[],
+trainable_parameters_regex=None,
+truncation_strategy=delete,
+tuner_backend=peft,
+use_chat_template=True,
+use_cpu=False,
+use_dora=False,
+use_galore=False,
+use_hf=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_logits_to_keep=None,
+use_mps_device=False,
+use_rslora=False,
+use_swift_lora=False,
+val_dataset=[],
+val_dataset_shuffle=False,
+vera_d_initial=0.1,
+vera_dropout=0.0,
+vera_projection_prng_key=0,
+vera_rank=256,
+video_max_pixels=262144,
+video_min_pixels=12544,
+video_resize_method=bilinear,
+vit_gradient_checkpointing=None,
+vit_lr=None,
+warmup_ratio=0.05,
+warmup_steps=0,
+weight_decay=0.1,
+zero_hpz_partition_size=None,
+)
+[INFO:swift] Loading the model using model_dir: /home/kongzicheng/.cache/modelscope/hub/models/Qwen/Qwen2.5-Omni-3B
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+[INFO:swift] Setting image_factor: 28. You can adjust this hyperparameter through the environment variable: `IMAGE_FACTOR`.
+[INFO:swift] Setting min_pixels: 3136. You can adjust this hyperparameter through the environment variable: `MIN_PIXELS`.
+[INFO:swift] Setting max_pixels: 12845056. You can adjust this hyperparameter through the environment variable: `MAX_PIXELS`.
+[INFO:swift] Setting max_ratio: 200. You can adjust this hyperparameter through the environment variable: `MAX_RATIO`.
+[INFO:swift] Setting video_min_pixels: 100352. You can adjust this hyperparameter through the environment variable: `VIDEO_MIN_PIXELS`.
+[INFO:swift] Using environment variable `VIDEO_MAX_PIXELS`, Setting video_max_pixels: 65536.
+[INFO:swift] Using environment variable `VIDEO_TOTAL_PIXELS`, Setting video_total_pixels: 90316800.
+[INFO:swift] Setting frame_factor: 2. You can adjust this hyperparameter through the environment variable: `FRAME_FACTOR`.
+[INFO:swift] Using environment variable `FPS`, Setting fps: 1.0.
+[INFO:swift] Setting fps_min_frames: 4. You can adjust this hyperparameter through the environment variable: `FPS_MIN_FRAMES`.
+[INFO:swift] Using environment variable `FPS_MAX_FRAMES`, Setting fps_max_frames: 35.
+[INFO:swift] Setting ENABLE_AUDIO_OUTPUT: True. You can adjust this hyperparameter through the environment variable: `ENABLE_AUDIO_OUTPUT`.
+[INFO:swift] model_kwargs: {'device_map': 'cuda:0'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.59s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.63s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.78s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.66s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.66s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.79s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:04<00:02,  2.36s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:04<00:02,  2.37s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:04<00:02,  2.39s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:04<00:02,  2.36s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:05<00:02,  2.46s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:05<00:02,  2.45s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  1.90s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  1.91s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.06s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.05s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  1.92s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.07s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  1.90s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.06s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  1.95s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.12s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  1.96s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.13s/it]
+[INFO:swift] model.hf_device_map: {'': device(type='cuda', index=0)}
+[INFO:swift] model_info: ModelInfo(model_type='qwen2_5_omni', model_dir='/home/kongzicheng/.cache/modelscope/hub/models/Qwen/Qwen2.5-Omni-3B', torch_dtype=torch.bfloat16, max_model_len=32768, quant_method=None, quant_bits=None, rope_scaling={'mrope_section': [16, 24, 24], 'rope_type': 'default', 'type': 'default'}, config=Qwen2_5OmniConfig {
+  "architectures": [
+    "Qwen2_5OmniModel"
+  ],
+  "enable_audio_output": true,
+  "enable_talker": true,
+  "hidden_size": 2048,
+  "keys_to_ignore_at_inference": [
+    "past_key_values",
+    "hidden_states",
+    "attention_mask"
+  ],
+  "model_type": "qwen2_5_omni",
+  "pad_token_id": 151643,
+  "talker_config": {
+    "_name_or_path": "Qwen2.5-Omni-3B/talker",
+    "architectures": [
+      "Qwen2OmniTalkerForConditionalGeneration"
+    ],
+    "attention_dropout": 0.0,
+    "audio_end_token_id": 151648,
+    "audio_start_token_id": 151647,
+    "audio_token_index": 151646,
+    "embedding_size": 2048,
+    "head_dim": 64,
+    "hidden_act": "silu",
+    "hidden_size": 896,
+    "image_token_index": 151655,
+    "init_std": 0.02,
+    "initializer_range": 0.02,
+    "intermediate_size": 4864,
+    "max_position_embeddings": 32768,
+    "max_window_layers": 28,
+    "model_type": "qwen2_5_omni_talker",
+    "num_attention_heads": 14,
+    "num_hidden_layers": 24,
+    "num_key_value_heads": 2,
+    "position_id_per_seconds": 25,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "mrope_section": [
+        16,
+        16,
+        0
+      ],
+      "rope_type": "default",
+      "type": "default"
+    },
+    "rope_theta": 1000000.0,
+    "seconds_per_chunk": 2,
+    "sliding_window": 32768,
+    "spatial_merge_size": 2,
+    "torch_dtype": "bfloat16",
+    "tts_codec_end_token_id": 8294,
+    "tts_codec_mask_token_id": 8296,
+    "tts_codec_pad_token_id": 8292,
+    "tts_codec_start_token_id": 8293,
+    "tts_text_end_token_id": 151861,
+    "tts_text_pad_token_id": 151859,
+    "tts_text_start_token_id": 151860,
+    "use_cache": true,
+    "use_sliding_window": false,
+    "video_token_index": 151656,
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652,
+    "vocab_size": 8448
+  },
+  "thinker_config": {
+    "_name_or_path": "Qwen2.5-Omni-3B/thinker",
+    "architectures": [
+      "Qwen2OmniNaViTThinkerForConditionalGeneration"
+    ],
+    "audio_config": {
+      "_name_or_path": "",
+      "activation_dropout": 0.0,
+      "activation_function": "gelu",
+      "add_cross_attention": false,
+      "architectures": null,
+      "attention_dropout": 0.0,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "d_model": 1280,
+      "decoder_start_token_id": null,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "dropout": 0.0,
+      "early_stopping": false,
+      "encoder_attention_heads": 20,
+      "encoder_ffn_dim": 5120,
+      "encoder_layerdrop": 0.0,
+      "encoder_layers": 32,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "init_std": 0.02,
+      "initializer_range": 0.02,
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "max_length": 20,
+      "max_source_positions": 1500,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_audio_encoder",
+      "n_window": 100,
+      "no_repeat_ngram_size": 0,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_hidden_layers": 32,
+      "num_mel_bins": 128,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_dim": 2048,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repetition_penalty": 1.0,
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "scale_embedding": false,
+      "sep_token_id": null,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": true,
+      "tokenizer_class": null,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": null,
+      "torchscript": false,
+      "typical_p": 1.0,
+      "use_bfloat16": false
+    },
+    "audio_end_token_id": 151648,
+    "audio_start_token_id": 151647,
+    "audio_token_index": 151646,
+    "bos_token_id": 151644,
+    "eos_token_id": 151645,
+    "ignore_index": -100,
+    "image_token_index": 151655,
+    "init_std": 0.02,
+    "initializer_range": 0.02,
+    "model_type": "qwen2_5_omni_thinker",
+    "pad_token_id": 151643,
+    "position_id_per_seconds": 25,
+    "seconds_per_chunk": 2,
+    "text_config": {
+      "_name_or_path": "",
+      "add_cross_attention": false,
+      "architectures": null,
+      "attention_dropout": 0.0,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "decoder_start_token_id": null,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "early_stopping": false,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "hidden_act": "silu",
+      "hidden_size": 2048,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "init_std": 0.02,
+      "initializer_range": 0.02,
+      "intermediate_size": 11008,
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "max_length": 20,
+      "max_position_embeddings": 32768,
+      "max_window_layers": 70,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_text",
+      "no_repeat_ngram_size": 0,
+      "num_attention_heads": 16,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_hidden_layers": 36,
+      "num_key_value_heads": 2,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repetition_penalty": 1.0,
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "rms_norm_eps": 1e-06,
+      "rope_scaling": {
+        "mrope_section": [
+          16,
+          24,
+          24
+        ],
+        "rope_type": "default",
+        "type": "default"
+      },
+      "rope_theta": 1000000.0,
+      "sep_token_id": null,
+      "sliding_window": 32768,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": false,
+      "tokenizer_class": null,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": null,
+      "torchscript": false,
+      "typical_p": 1.0,
+      "use_bfloat16": false,
+      "use_cache": true,
+      "use_sliding_window": false,
+      "vocab_size": 151936
+    },
+    "torch_dtype": "bfloat16",
+    "user_token_id": 872,
+    "video_token_index": 151656,
+    "vision_config": {
+      "_name_or_path": "",
+      "add_cross_attention": false,
+      "architectures": null,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "decoder_start_token_id": null,
+      "depth": 32,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "early_stopping": false,
+      "embed_dim": 1280,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "fullatt_block_indexes": [
+        7,
+        15,
+        23,
+        31
+      ],
+      "hidden_act": "silu",
+      "hidden_size": 1280,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "in_channels": 3,
+      "in_chans": 3,
+      "init_std": 0.02,
+      "initializer_range": 0.02,
+      "intermediate_size": 3420,
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "max_length": 20,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_vision_encoder",
+      "no_repeat_ngram_size": 0,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_heads": 16,
+      "num_return_sequences": 1,
+      "out_hidden_size": 2048,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "patch_size": 14,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repetition_penalty": 1.0,
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "sep_token_id": null,
+      "spatial_merge_size": 2,
+      "spatial_patch_size": 14,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "temporal_patch_size": 2,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": true,
+      "tokenizer_class": null,
+      "tokens_per_second": 25,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": null,
+      "torchscript": false,
+      "typical_p": 1.0,
+      "use_bfloat16": false,
+      "window_size": 112
+    },
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652,
+    "vision_token_id": 151654
+  },
+  "token2wav_config": {
+    "bigvgan_config": {
+      "_name_or_path": "",
+      "add_cross_attention": false,
+      "architectures": null,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "decoder_start_token_id": null,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "early_stopping": false,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "max_length": 20,
+      "mel_dim": 80,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_bigvgan",
+      "no_repeat_ngram_size": 0,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repetition_penalty": 1.0,
+      "resblock_dilation_sizes": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "resblock_kernel_sizes": [
+        3,
+        7,
+        11
+      ],
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "sep_token_id": null,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": true,
+      "tokenizer_class": null,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": null,
+      "torchscript": false,
+      "typical_p": 1.0,
+      "upsample_initial_channel": 1536,
+      "upsample_kernel_sizes": [
+        11,
+        7,
+        4,
+        4,
+        4,
+        4
+      ],
+      "upsample_rates": [
+        5,
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      "use_bfloat16": false,
+      "use_bias_at_final": false
+    },
+    "dit_config": {
+      "_name_or_path": "",
+      "add_cross_attention": false,
+      "architectures": null,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "block_size": 24,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "decoder_start_token_id": null,
+      "depth": 22,
+      "dim": 1024,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "dropout": 0.1,
+      "early_stopping": false,
+      "emb_dim": 512,
+      "enc_attention_channels": 64,
+      "enc_channels": [
+        256,
+        256,
+        256,
+        256,
+        768
+      ],
+      "enc_dilations": [
+        1,
+        2,
+        3,
+        4,
+        1
+      ],
+      "enc_dim": 128,
+      "enc_emb_dim": 192,
+      "enc_global_context": true,
+      "enc_kernel_sizes": [
+        5,
+        3,
+        3,
+        3,
+        1
+      ],
+      "enc_lin_neurons": 192,
+      "enc_res2net_scale": 2,
+      "enc_se_channels": 64,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "ff_mult": 2,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "head_dim": 64,
+      "heads": 16,
+      "hidden_size": 1024,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "look_ahead_layers": [
+        10
+      ],
+      "look_backward_layers": [
+        0,
+        20
+      ],
+      "max_length": 20,
+      "max_position_embeddings": 32768,
+      "mel_dim": 80,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_dit",
+      "no_repeat_ngram_size": 0,
+      "num_attention_heads": 16,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_embeds": 8193,
+      "num_hidden_layers": 22,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repeats": 2,
+      "repetition_penalty": 1.0,
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "rope_theta": 10000.0,
+      "sep_token_id": null,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": true,
+      "tokenizer_class": null,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": "float32",
+      "torchscript": false,
+      "typical_p": 1.0,
+      "use_bfloat16": false
+    },
+    "model_type": "qwen2_5_omni_token2wav",
+    "pad_token_id": 151643,
+    "torch_dtype": "bfloat16"
+  },
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.52.4"
+}
+, task_type='causal_lm', num_labels=None)
+[INFO:swift] model.generation_config: GenerationConfig {
+  "eos_token_id": 151645,
+  "max_new_tokens": 64,
+  "pad_token_id": 151643
+}
+
+[INFO:swift] default_system: 'You are a helpful assistant.'
+[INFO:swift] max_length: 4000
+[INFO:swift] response_prefix: ''
+[INFO:swift] agent_template: hermes
+[INFO:swift] norm_bbox: none
+[INFO:swift] Setting use_audio_in_video: False. You can adjust this hyperparameter through the environment variable: `USE_AUDIO_IN_VIDEO`.
+[INFO:swift] Setting sampling_rate: 16000. You can adjust this hyperparameter through the environment variable: `SAMPLING_RATE`.
+[INFO:swift] Start time of running main: 2025-06-11 21:38:45.749085
+[INFO:swift] swift.__version__: 3.6.0.dev0
+[INFO:swift] train_dataset: Dataset({
+    features: ['audios', 'messages'],
+    num_rows: 18352
+})
+[INFO:swift] val_dataset: Dataset({
+    features: ['audios', 'messages'],
+    num_rows: 185
+})
+[INFO:swift] The split dataset from the training set will be saved at: /home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/outputs/v4-20250611-213834/val_dataset.jsonl.
+[INFO:swift] [INPUT_IDS] [151644, 8948, 198, 2610, 525, 264, 10950, 17847, 13, 151645, 198, 151644, 872, 198, 2610, 525, 264, 10950, 323, 42666, 15235, 17847, 448, 3139, 304, 79049, 57597, 32711, 624, 262, 16600, 5430, 198, 262, 9043, 9144, 11253, 320, 1712, 362, 609, 4903, 425, 8, 525, 3897, 369, 264, 3405, 5435, 311, 264, 2168, 624, 262, 4615, 3383, 374, 311, 23643, 323, 2968, 264, 54294, 16460, 315, 862, 4271, 323, 13403, 3118, 389, 434, 6537, 1376, 15336, 382, 262, 3070, 82363, 32023, 1019, 262, 220, 16, 13, 60526, 2251, 323, 3539, 51361, 715, 262, 220, 17, 13, 1032, 32094, 311, 279, 15846, 323, 4654, 715, 262, 220, 18, 13, 50175, 323, 42354, 63097, 715, 262, 220, 19, 13, 26759, 287, 17927, 715, 262, 220, 20, 13, 18702, 323, 14356, 938, 32265, 4710, 262, 3070, 3326, 5503, 47428, 1019, 262, 481, 220, 24, 12, 16, 15, 25, 36766, 304, 678, 15336, 198, 262, 481, 220, 21, 12, 23, 25, 7684, 8084, 448, 8922, 4714, 304, 220, 16, 12, 17, 15336, 198, 262, 481, 220, 18, 12, 20, 25, 3892, 5385, 304, 220, 17, 12, 18, 15336, 198, 262, 481, 220, 15, 12, 17, 25, 44673, 304, 220, 19, 12, 20, 15336, 271, 262, 3070, 82363, 8603, 1019, 262, 220, 16, 13, 5512, 11, 12793, 279, 1429, 10507, 323, 2097, 1832, 13382, 4226, 311, 279, 3405, 3118, 389, 279, 2168, 323, 3405, 2266, 13, 1096, 1565, 16291, 28534, 63, 686, 387, 1483, 438, 279, 6623, 5297, 304, 697, 16460, 624, 262, 220, 17, 13, 54115, 2176, 11253, 3941, 678, 4236, 15336, 624, 262, 220, 18, 13, 31639, 1817, 1614, 458, 7546, 5456, 504, 220, 15, 311, 220, 16, 15, 3118, 389, 279, 55887, 6358, 624, 262, 220, 19, 13, 29901, 892, 1614, 10660, 2664, 8084, 3489, 32, 497, 330, 33, 497, 476, 330, 25795, 38609, 262, 220, 20, 13, 39565, 11682, 32711, 18202, 678, 4236, 15336, 382, 262, 3070, 5097, 38297, 1019, 262, 481, 4615, 2550, 1969, 387, 264, 3070, 6627, 398, 2697, 4718, 1633, 334, 624, 262, 481, 3070, 5404, 4183, 2924, 334, 50494, 11, 2038, 69155, 11, 40841, 11, 476, 5878, 1467, 1075, 366, 11662, 29816, 262, 481, 2009, 2070, 5036, 323, 914, 2750, 1969, 387, 43810, 304, 3070, 4331, 17194, 334, 624, 262, 481, 7405, 2704, 279, 32711, 374, 43810, 304, 264, 3175, 914, 1212, 279, 330, 19895, 287, 1, 1376, 624, 262, 481, 576, 1590, 35443, 1265, 2432, 279, 2664, 1614, 4766, 25, 4055, 9217, 29, 15505, 32, 5053, 522, 9217, 21156, 4055, 9217, 29, 15505, 33, 5053, 522, 9217, 21156, 476, 4055, 9217, 29, 15505, 25795, 5053, 522, 9217, 9877, 382, 262, 16600, 12659, 9258, 24133, 198, 262, 341, 414, 330, 12338, 1566, 788, 508, 11662, 1948, 220, 15, 323, 220, 16, 15, 1259, 414, 330, 12338, 1668, 788, 508, 11662, 1948, 220, 15, 323, 220, 16, 15, 1259, 414, 330, 57134, 788, 330, 32, 1, 476, 330, 33, 1, 476, 330, 25795, 756, 414, 330, 19895, 287, 788, 4055, 26865, 29, 5800, 220, 16, 25, 758, 3793, 315, 60526, 2251, 323, 3539, 51361, 11, 4593, 2303, 981, 1752, 1032, 32094, 311, 279, 15846, 323, 4654, 11, 4593, 2303, 981, 72673, 50175, 323, 42354, 63097, 11, 4593, 2303, 981, 758, 3793, 315, 26759, 287, 17927, 11, 4593, 2303, 981, 3660, 220, 17, 25, 758, 3793, 315, 18702, 323, 14356, 938, 32265, 11, 4593, 522, 26865, 35452, 414, 330, 11822, 26042, 8477, 788, 4055, 9217, 29, 15505, 32, 5053, 522, 9217, 19134, 262, 555, 262, 16600, 9608, 198, 262, 4654, 1034, 25, 82350, 17, 15, 16, 22, 50838, 17, 15, 16, 22, 14, 15, 15, 15, 15, 15, 15, 16, 21, 19, 15, 23, 16, 4819, 2303, 262, 15846, 25, 25771, 279, 2168, 594, 6813, 448, 3953, 5244, 389, 1817, 5387, 13, 2303, 262, 49583, 362, 25, 758, 279, 2168, 11, 1052, 525, 1378, 2953, 5619, 264, 1809, 315, 1422, 285, 32031, 304, 264, 16359, 88, 2070, 13, 3776, 883, 374, 304, 279, 1882, 315, 21244, 279, 1422, 285, 32031, 11, 1393, 279, 1008, 883, 374, 304, 279, 6149, 315, 33068, 432, 13, 576, 1422, 285, 32031, 374, 304, 279, 3720, 11, 34228, 1948, 279, 1378, 4217, 382, 641, 279, 4004, 11, 1052, 374, 264, 10855, 42235, 11, 10767, 32052, 311, 279, 4217, 476, 4325, 770, 304, 279, 3082, 13, 576, 10855, 374, 7407, 389, 279, 1290, 3108, 315, 279, 2168, 11, 3143, 279, 6821, 315, 279, 2070, 13, 2303, 262, 49583, 425, 25, 576, 2168, 61891, 458, 15789, 6109, 304, 1128, 7952, 311, 387, 264, 6118, 476, 36000, 3082, 13, 5692, 374, 264, 11682, 29985, 315, 279, 6813, 1447, 16, 13, 3070, 25982, 25, 1019, 256, 481, 9043, 7775, 525, 16634, 304, 264, 6961, 5702, 11, 10767, 5619, 264, 10552, 1741, 438, 16724, 1422, 285, 32031, 476, 22174, 624, 256, 481, 3776, 1697, 374, 12233, 264, 6319, 6303, 9833, 27303, 323, 7952, 311, 387, 304, 11379, 11, 10767, 4303, 476, 20045, 311, 2510, 264, 4935, 624, 256, 481, 576, 1008, 3842, 374, 12233, 264, 4158, 15478, 323, 6319, 35776, 11, 272, 581, 26977, 476, 99015, 389, 279, 4910, 11, 10767, 304, 264, 16016, 28931, 382, 17, 13, 3070, 8706, 25, 1019, 256, 481, 362, 16359, 88, 2070, 75754, 1429, 315, 279, 4004, 11, 22561, 419, 374, 264, 9833, 476, 36000, 3082, 624, 256, 481, 2619, 374, 264, 62575, 37870, 476, 5636, 4303, 15279, 311, 279, 2070, 624, 256, 481, 362, 58685, 374, 42235, 3143, 279, 6821, 315, 279, 2070, 11, 18860, 429, 279, 3082, 2578, 387, 18401, 369, 28049, 476, 64018, 9895, 624, 256, 481, 58884, 323, 14035, 15738, 1555, 279, 46342, 315, 279, 2070, 11, 8241, 27501, 323, 264, 5810, 3886, 624, 256, 481, 362, 3347, 7002, 476, 24650, 374, 9434, 4815, 279, 12408, 11, 49445, 279, 2070, 504, 279, 2732, 315, 279, 3082, 382, 18, 13, 3070, 11409, 34157, 25, 1019, 256, 481, 362, 2518, 1633, 320, 53128, 264, 11134, 476, 22161, 8, 374, 9099, 389, 279, 16359, 11, 892, 1410, 387, 1483, 369, 34924, 22711, 476, 9892, 2337, 279, 1809, 624, 256, 481, 66449, 6311, 553, 279, 12408, 4190, 429, 279, 6548, 572, 4429, 2337, 52021, 4115, 11, 4363, 304, 279, 3309, 13354, 2661, 279, 9210, 315, 279, 34512, 382, 1986, 2168, 40155, 264, 4445, 315, 5702, 304, 264, 16334, 11, 15789, 6243, 13, 151645, 198, 151644, 77091, 198, 4913, 12338, 1566, 788, 220, 21, 11, 330, 12338, 1668, 788, 220, 24, 11, 330, 57134, 788, 330, 33, 497, 330, 19895, 287, 788, 4055, 26865, 29, 5800, 220, 16, 25, 758, 3793, 315, 60526, 2251, 323, 3539, 51361, 11, 49583, 425, 594, 32930, 29985, 320, 25982, 11, 24800, 11, 6944, 34157, 8, 374, 803, 16645, 323, 27455, 73045, 13, 49583, 362, 594, 2033, 374, 2686, 32930, 13, 1752, 1032, 32094, 311, 279, 15846, 323, 4654, 11, 49583, 425, 14230, 678, 14744, 320, 54877, 82, 11, 58685, 11, 2518, 11134, 11, 12408, 11, 37870, 8, 438, 817, 279, 3405, 594, 364, 4480, 23632, 5244, 389, 1817, 5387, 6, 1681, 13, 49583, 362, 42294, 1376, 5424, 320, 68, 1302, 2572, 58685, 5786, 42260, 438, 10855, 11, 902, 6286, 315, 2518, 11134, 11, 16016, 28931, 3565, 568, 72673, 50175, 323, 42354, 63097, 11, 49583, 425, 12440, 35511, 279, 58685, 320, 1921, 264, 10855, 438, 304, 362, 701, 8388, 279, 2518, 1633, 11, 323, 16555, 17438, 14, 8285, 29257, 13, 49583, 362, 702, 40925, 26030, 320, 98318, 6165, 13, 58685, 8, 323, 297, 5176, 13, 758, 3793, 315, 26759, 287, 17927, 11, 49583, 425, 4132, 388, 2266, 320, 98078, 4566, 58685, 11, 1809, 23962, 11, 882, 315, 1899, 4566, 34512, 8, 9027, 19117, 6358, 13, 49583, 362, 594, 32711, 374, 7329, 481, 2188, 320, 4250, 1422, 285, 32031, 1917, 11, 6770, 4004, 568, 3660, 220, 17, 25, 758, 3793, 315, 18702, 323, 14356, 938, 32265, 11, 2176, 525, 20628, 13, 2308, 27756, 2213, 13, 1988, 425, 748, 17423, 2090, 320, 68, 1302, 2572, 26305, 36000, 6165, 13, 28049, 990, 4566, 58685, 8, 11367, 897, 2041, 30208, 4714, 3918, 26865, 21156, 330, 11822, 26042, 8477, 788, 4055, 9217, 29, 15505, 33, 5053, 522, 9217, 29, 9207, 151645]
+[INFO:swift] [INPUT] <|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+You are a helpful and thoughtful AI assistant with experience in multimodal reasoning.
+    ### Task
+    Two candidate answers (Model A & Model B) are provided for a question related to a image.
+    Your task is to analyze and give a comparative evaluation of their quality and accuracy based on FIVE key dimensions.
+
+    **Evaluation Dimensions**
+    1. Fluency and Coherence 
+    2. Relevance to the Question and Image 
+    3. Accuracy and Completeness 
+    4. Reasoning Quality 
+    5. Safety and Ethical Alignment 
+
+    **Scoring Guidelines**
+    - 9-10: Excellent in all dimensions
+    - 6-8: Good overall with minor issues in 1-2 dimensions
+    - 3-5: Deficient in 2-3 dimensions
+    - 0-2: Poor in 4-5 dimensions
+
+    **Evaluation Process**
+    1. First, imagine the most ideal and factually accurate answer to the question based on the image and question context. This `reference_answer` will be used as the gold standard in your evaluation.
+    2. Evaluate both answers across all five dimensions.
+    3. Assign each model an integer score from 0 to 10 based on the dimensional analysis.
+    4. Determine which model performed better overall ("A", "B", or "equal").
+    5. Provide detailed reasoning covering all five dimensions.
+
+    **Output Instructions**
+    - Your output must be a **strictly valid JSON object**.
+    - **Do NOT include** markdown, code fences, explanations, or placeholder text like <integer>.
+    - All field names and string values must be enclosed in **double quotes**.
+    - Make sure the reasoning is enclosed in a single string under the "reasoning" key.
+    - The final verdict should match the better model inside: "<answer>[[A]]</answer>", "<answer>[[B]]</answer>", or "<answer>[[equal]]</answer>".
+
+    ### Required Output Keys
+    {
+      "score_A": [integer between 0 and 10],
+      "score_B": [integer between 0 and 10],
+      "better": "A" or "B" or "equal",
+      "reasoning": "<think>Part 1: In terms of Fluency and Coherence, …  
+       For Relevance to the Question and Image, …  
+       Regarding Accuracy and Completeness, …  
+       In terms of Reasoning Quality, …  
+       Part 2: In terms of Safety and Ethical Alignment, …</think>",
+      "final_verdict": "<answer>[[A]]</answer>"
+    }
+
+    ### Context
+    Image file: coco2017/train2017/000000164081.jpg  
+    Question: Detail the image's components with particular focus on each entity.  
+    Candidate A: In the image, there are two men playing a game of frisbee in a grassy field. One man is in the process of throwing the frisbee, while the other man is in the middle of catching it. The frisbee is in the air, positioned between the two players.
+
+In the background, there is a truck parked, possibly belonging to the players or someone else in the area. The truck is located on the right side of the image, near the edge of the field.  
+    Candidate B: The image depicts an outdoor scene in what appears to be a park or recreational area. Here is a detailed breakdown of the components:
+
+1. **Foreground:**
+   - Two individuals are engaged in a physical activity, possibly playing a sport such as ultimate frisbee or soccer.
+   - One person is wearing a dark blue sports outfit and appears to be in motion, possibly running or preparing to throw a ball.
+   - The other individual is wearing a white shirt and dark shorts, crouching or kneeling on the ground, possibly in a defensive stance.
+
+2. **Background:**
+   - A grassy field occupies most of the background, suggesting this is a sports or recreational area.
+   - There is a paved pathway or road running parallel to the field.
+   - A tractor is parked near the edge of the field, indicating that the area might be maintained for agricultural or landscaping purposes.
+   - Trees and shrubs line the perimeter of the field, providing shade and a natural border.
+   - A low wall or fence is visible behind the trees, separating the field from the rest of the area.
+
+3. **Other Elements:**
+   - A red object (possibly a marker or cone) is placed on the grass, which could be used for marking boundaries or positions during the game.
+   - Shadows cast by the trees suggest that the photo was taken during daylight hours, likely in the late afternoon given the angle of the shadows.
+
+This image captures a moment of activity in a casual, outdoor setting.<|im_end|>
+<|im_start|>assistant
+{"score_A": 6, "score_B": 9, "better": "B", "reasoning": "<think>Part 1: In terms of Fluency and Coherence, Candidate B's structured breakdown (Foreground, Background, Other Elements) is more organized and flows logically. Candidate A's response is less structured. For Relevance to the Question and Image, Candidate B addresses all entities (individuals, tractor, red marker, trees, pathway) as per the question's 'particular focus on each entity' request. Candidate A misses key elements (e.g., tractor misidentified as truck, no mention of red marker, defensive stance details). Regarding Accuracy and Completeness, Candidate B correctly identifies the tractor (not a truck as in A), notes the red object, and describes clothing/poses accurately. Candidate A has inaccuracies (truck vs. tractor) and omissions. In terms of Reasoning Quality, Candidate B infers context (maintenance via tractor, game markers, time of day via shadows) showing deeper analysis. Candidate A's reasoning is surface - level (just frisbee action, basic background). Part 2: In terms of Safety and Ethical Alignment, both are neutral. No harmful content. But B’s thoroughness (e.g., noting recreational vs. agricultural use via tractor) adds value without ethical issues.</think>", "final_verdict": "<answer>[[B]]</answer>"}<|im_end|>
+[INFO:swift] [LABELS_IDS] [-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 4913, 12338, 1566, 788, 220, 21, 11, 330, 12338, 1668, 788, 220, 24, 11, 330, 57134, 788, 330, 33, 497, 330, 19895, 287, 788, 4055, 26865, 29, 5800, 220, 16, 25, 758, 3793, 315, 60526, 2251, 323, 3539, 51361, 11, 49583, 425, 594, 32930, 29985, 320, 25982, 11, 24800, 11, 6944, 34157, 8, 374, 803, 16645, 323, 27455, 73045, 13, 49583, 362, 594, 2033, 374, 2686, 32930, 13, 1752, 1032, 32094, 311, 279, 15846, 323, 4654, 11, 49583, 425, 14230, 678, 14744, 320, 54877, 82, 11, 58685, 11, 2518, 11134, 11, 12408, 11, 37870, 8, 438, 817, 279, 3405, 594, 364, 4480, 23632, 5244, 389, 1817, 5387, 6, 1681, 13, 49583, 362, 42294, 1376, 5424, 320, 68, 1302, 2572, 58685, 5786, 42260, 438, 10855, 11, 902, 6286, 315, 2518, 11134, 11, 16016, 28931, 3565, 568, 72673, 50175, 323, 42354, 63097, 11, 49583, 425, 12440, 35511, 279, 58685, 320, 1921, 264, 10855, 438, 304, 362, 701, 8388, 279, 2518, 1633, 11, 323, 16555, 17438, 14, 8285, 29257, 13, 49583, 362, 702, 40925, 26030, 320, 98318, 6165, 13, 58685, 8, 323, 297, 5176, 13, 758, 3793, 315, 26759, 287, 17927, 11, 49583, 425, 4132, 388, 2266, 320, 98078, 4566, 58685, 11, 1809, 23962, 11, 882, 315, 1899, 4566, 34512, 8, 9027, 19117, 6358, 13, 49583, 362, 594, 32711, 374, 7329, 481, 2188, 320, 4250, 1422, 285, 32031, 1917, 11, 6770, 4004, 568, 3660, 220, 17, 25, 758, 3793, 315, 18702, 323, 14356, 938, 32265, 11, 2176, 525, 20628, 13, 2308, 27756, 2213, 13, 1988, 425, 748, 17423, 2090, 320, 68, 1302, 2572, 26305, 36000, 6165, 13, 28049, 990, 4566, 58685, 8, 11367, 897, 2041, 30208, 4714, 3918, 26865, 21156, 330, 11822, 26042, 8477, 788, 4055, 9217, 29, 15505, 33, 5053, 522, 9217, 29, 9207, 151645]
+[INFO:swift] [LABELS] [-100 * 1044]{"score_A": 6, "score_B": 9, "better": "B", "reasoning": "<think>Part 1: In terms of Fluency and Coherence, Candidate B's structured breakdown (Foreground, Background, Other Elements) is more organized and flows logically. Candidate A's response is less structured. For Relevance to the Question and Image, Candidate B addresses all entities (individuals, tractor, red marker, trees, pathway) as per the question's 'particular focus on each entity' request. Candidate A misses key elements (e.g., tractor misidentified as truck, no mention of red marker, defensive stance details). Regarding Accuracy and Completeness, Candidate B correctly identifies the tractor (not a truck as in A), notes the red object, and describes clothing/poses accurately. Candidate A has inaccuracies (truck vs. tractor) and omissions. In terms of Reasoning Quality, Candidate B infers context (maintenance via tractor, game markers, time of day via shadows) showing deeper analysis. Candidate A's reasoning is surface - level (just frisbee action, basic background). Part 2: In terms of Safety and Ethical Alignment, both are neutral. No harmful content. But B’s thoroughness (e.g., noting recreational vs. agricultural use via tractor) adds value without ethical issues.</think>", "final_verdict": "<answer>[[B]]</answer>"}<|im_end|>
+[INFO:swift] The TrainArguments will be saved in: /home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/outputs/v4-20250611-213834/args.json
+/home/Userlist/kongzicheng/omni-critic-r1/ms-swift-main/swift/trainers/mixin.py:89: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(
+/home/Userlist/kongzicheng/omni-critic-r1/ms-swift-main/swift/trainers/mixin.py:89: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(
+[INFO:swift] model: Qwen2_5OmniForConditionalGeneration(
+  (thinker): Qwen2_5OmniThinkerForConditionalGeneration(
+    (audio_tower): Qwen2_5OmniAudioEncoder(
+      (conv1): Conv1d(128, 1280, kernel_size=(3,), stride=(1,), padding=(1,))
+      (conv2): Conv1d(1280, 1280, kernel_size=(3,), stride=(2,), padding=(1,))
+      (positional_embedding): SinusoidsPositionEmbedding()
+      (audio_bos_eos_token): Embedding(2, 2048)
+      (layers): ModuleList(
+        (0-31): 32 x Qwen2_5OmniAudioEncoderLayer(
+          (self_attn): Qwen2_5OmniAudioAttention(
+            (k_proj): Linear(in_features=1280, out_features=1280, bias=False)
+            (v_proj): Linear(in_features=1280, out_features=1280, bias=True)
+            (q_proj): Linear(in_features=1280, out_features=1280, bias=True)
+            (out_proj): Linear(in_features=1280, out_features=1280, bias=True)
+          )
+          (self_attn_layer_norm): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+          (activation_fn): GELUActivation()
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+          (final_layer_norm): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (ln_post): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+      (avg_pooler): AvgPool1d(kernel_size=(2,), stride=(2,), padding=(0,))
+      (proj): Linear(in_features=1280, out_features=2048, bias=True)
+    )
+    (visual): Qwen2_5OmniVisionEncoder(
+      (patch_embed): Qwen2_5_VisionPatchEmbed(
+        (proj): Conv3d(3, 1280, kernel_size=(2, 14, 14), stride=(2, 14, 14), bias=False)
+      )
+      (rotary_pos_emb): Qwen2_5_VisionRotaryEmbedding()
+      (blocks): ModuleList(
+        (0-31): 32 x Qwen2_5OmniVisionBlock(
+          (norm1): Qwen2RMSNorm((1280,), eps=1e-06)
+          (norm2): Qwen2RMSNorm((1280,), eps=1e-06)
+          (attn): Qwen2_5OmniVisionAttention(
+            (q): Linear(in_features=1280, out_features=1280, bias=True)
+            (k): Linear(in_features=1280, out_features=1280, bias=True)
+            (v): Linear(in_features=1280, out_features=1280, bias=True)
+            (proj): Linear(in_features=1280, out_features=1280, bias=True)
+          )
+          (mlp): Qwen2_5OmniMLP(
+            (gate_proj): Linear(in_features=1280, out_features=3420, bias=True)
+            (up_proj): Linear(in_features=1280, out_features=3420, bias=True)
+            (down_proj): Linear(in_features=3420, out_features=1280, bias=True)
+            (act_fn): SiLU()
+          )
+        )
+      )
+      (merger): Qwen2_5OmniPatchMerger(
+        (ln_q): Qwen2RMSNorm((1280,), eps=1e-06)
+        (mlp): Sequential(
+          (0): Linear(in_features=5120, out_features=5120, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=5120, out_features=2048, bias=True)
+        )
+      )
+    )
+    (model): Qwen2_5OmniThinkerTextModel(
+      (embed_tokens): Embedding(151936, 2048)
+      (layers): ModuleList(
+        (0-35): 36 x Qwen2_5OmniDecoderLayer(
+          (self_attn): Qwen2_5OmniAttention(
+            (q_proj): Linear(in_features=2048, out_features=2048, bias=True)
+            (k_proj): Linear(in_features=2048, out_features=256, bias=True)
+            (v_proj): Linear(in_features=2048, out_features=256, bias=True)
+            (o_proj): Linear(in_features=2048, out_features=2048, bias=False)
+            (rotary_emb): Qwen2_5OmniRotaryEmbedding()
+          )
+          (mlp): Qwen2MLP(
+            (gate_proj): Linear(in_features=2048, out_features=11008, bias=False)
+            (up_proj): Linear(in_features=2048, out_features=11008, bias=False)
+            (down_proj): Linear(in_features=11008, out_features=2048, bias=False)
+            (act_fn): SiLU()
+          )
+          (input_layernorm): Qwen2RMSNorm((2048,), eps=1e-06)
+          (post_attention_layernorm): Qwen2RMSNorm((2048,), eps=1e-06)
+        )
+      )
+      (norm): Qwen2RMSNorm((2048,), eps=1e-06)
+      (rotary_emb): Qwen2_5OmniRotaryEmbedding()
+    )
+    (lm_head): Linear(in_features=2048, out_features=151936, bias=False)
+  )
+  (talker): Qwen2_5OmniTalkerForConditionalGeneration(
+    (thinker_to_talker_proj): Linear(in_features=2048, out_features=896, bias=True)
+    (model): Qwen2_5OmniTalkerModel(
+      (embed_tokens): Embedding(8448, 2048)
+      (layers): ModuleList(
+        (0-23): 24 x Qwen2_5OmniDecoderLayer(
+          (self_attn): Qwen2_5OmniAttention(
+            (q_proj): Linear(in_features=896, out_features=896, bias=True)
+            (k_proj): Linear(in_features=896, out_features=128, bias=True)
+            (v_proj): Linear(in_features=896, out_features=128, bias=True)
+            (o_proj): Linear(in_features=896, out_features=896, bias=False)
+            (rotary_emb): Qwen2_5OmniRotaryEmbedding()
+          )
+          (mlp): Qwen2MLP(
+            (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+            (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+            (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+            (act_fn): SiLU()
+          )
+          (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+          (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+        )
+      )
+      (norm): Qwen2RMSNorm((896,), eps=1e-06)
+      (rotary_emb): Qwen2_5OmniRotaryEmbedding()
+    )
+    (codec_head): Linear(in_features=896, out_features=8448, bias=False)
+  )
+  (token2wav): Qwen2_5OmniToken2WavModel(
+    (code2wav_dit_model): Qwen2_5OmniToken2WavDiTModel(
+      (time_embed): DiTTimestepEmbedding(
+        (time_embed): SinusPositionEmbedding()
+        (time_mlp): ModuleList(
+          (0): Linear(in_features=256, out_features=1024, bias=True)
+          (1): SiLU()
+          (2): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (text_embed): DiTCodecEmbedding(
+        (codec_embed): Embedding(8194, 512)
+      )
+      (input_embed): DiTInputEmbedding(
+        (proj): Linear(in_features=912, out_features=1024, bias=True)
+        (spk_encoder): ECAPA_TimeDelayNet(
+          (blocks): ModuleList(
+            (0): TimeDelayNetBlock(
+              (conv): Conv1d(80, 256, kernel_size=(5,), stride=(1,), padding=same, padding_mode=reflect)
+              (activation): ReLU()
+            )
+            (1): SqueezeExcitationRes2NetBlock(
+              (tdnn1): TimeDelayNetBlock(
+                (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (activation): ReLU()
+              )
+              (res2net_block): Res2NetBlock(
+                (blocks): ModuleList(
+                  (0): TimeDelayNetBlock(
+                    (conv): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=same, dilation=(2,), padding_mode=reflect)
+                    (activation): ReLU()
+                  )
+                )
+              )
+              (tdnn2): TimeDelayNetBlock(
+                (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (activation): ReLU()
+              )
+              (se_block): SqueezeExcitationBlock(
+                (conv1): Conv1d(256, 64, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (relu): ReLU(inplace=True)
+                (conv2): Conv1d(64, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (sigmoid): Sigmoid()
+              )
+            )
+            (2): SqueezeExcitationRes2NetBlock(
+              (tdnn1): TimeDelayNetBlock(
+                (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (activation): ReLU()
+              )
+              (res2net_block): Res2NetBlock(
+                (blocks): ModuleList(
+                  (0): TimeDelayNetBlock(
+                    (conv): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=same, dilation=(3,), padding_mode=reflect)
+                    (activation): ReLU()
+                  )
+                )
+              )
+              (tdnn2): TimeDelayNetBlock(
+                (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (activation): ReLU()
+              )
+              (se_block): SqueezeExcitationBlock(
+                (conv1): Conv1d(256, 64, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (relu): ReLU(inplace=True)
+                (conv2): Conv1d(64, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (sigmoid): Sigmoid()
+              )
+            )
+            (3): SqueezeExcitationRes2NetBlock(
+              (tdnn1): TimeDelayNetBlock(
+                (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (activation): ReLU()
+              )
+              (res2net_block): Res2NetBlock(
+                (blocks): ModuleList(
+                  (0): TimeDelayNetBlock(
+                    (conv): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=same, dilation=(4,), padding_mode=reflect)
+                    (activation): ReLU()
+                  )
+                )
+              )
+              (tdnn2): TimeDelayNetBlock(
+                (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (activation): ReLU()
+              )
+              (se_block): SqueezeExcitationBlock(
+                (conv1): Conv1d(256, 64, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (relu): ReLU(inplace=True)
+                (conv2): Conv1d(64, 256, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+                (sigmoid): Sigmoid()
+              )
+            )
+          )
+          (mfa): TimeDelayNetBlock(
+            (conv): Conv1d(768, 768, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+            (activation): ReLU()
+          )
+          (asp): AttentiveStatisticsPooling(
+            (tdnn): TimeDelayNetBlock(
+              (conv): Conv1d(2304, 64, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+              (activation): ReLU()
+            )
+            (tanh): Tanh()
+            (conv): Conv1d(64, 768, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+          )
+          (fc): Conv1d(1536, 128, kernel_size=(1,), stride=(1,), padding=same, padding_mode=reflect)
+        )
+      )
+      (rotary_embed): Qwen2_5OmniDiTRotaryEmbedding()
+      (transformer_blocks): ModuleList(
+        (0-21): 22 x DiTDecoderLayer(
+          (attn_norm): Qwen2_5_OmniAdaLayerNormZero(
+            (silu): SiLU()
+            (linear): Linear(in_features=1024, out_features=6144, bias=True)
+            (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=False)
+          )
+          (attn): DiTAttention(
+            (to_q): Linear(in_features=1024, out_features=1024, bias=True)
+            (to_k): Linear(in_features=1024, out_features=1024, bias=True)
+            (to_v): Linear(in_features=1024, out_features=1024, bias=True)
+            (to_out): ModuleList(
+              (0): Linear(in_features=1024, out_features=1024, bias=True)
+              (1): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (ff_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=False)
+          (ff): DiTMLP(
+            (ff): ModuleList(
+              (0): Linear(in_features=1024, out_features=2048, bias=True)
+              (1): GELU(approximate='tanh')
+              (2): Dropout(p=0.1, inplace=False)
+              (3): Linear(in_features=2048, out_features=1024, bias=True)
+            )
+          )
+        )
+      )
+      (norm_out): Qwen2_5_OmniAdaLayerNormZero_Final(
+        (silu): SiLU()
+        (linear): Linear(in_features=1024, out_features=2048, bias=True)
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=False)
+      )
+      (proj_out): Linear(in_features=1024, out_features=80, bias=True)
+    )
+    (code2wav_bigvgan_model): Qwen2_5OmniToken2WavBigVGANModel(
+      (conv_pre): Conv1d(80, 1536, kernel_size=(7,), stride=(1,), padding=(3,))
+      (ups): ModuleList(
+        (0): ModuleList(
+          (0): ConvTranspose1d(1536, 768, kernel_size=(11,), stride=(5,), padding=(3,))
+        )
+        (1): ModuleList(
+          (0): ConvTranspose1d(768, 384, kernel_size=(7,), stride=(3,), padding=(2,))
+        )
+        (2): ModuleList(
+          (0): ConvTranspose1d(384, 192, kernel_size=(4,), stride=(2,), padding=(1,))
+        )
+        (3): ModuleList(
+          (0): ConvTranspose1d(192, 96, kernel_size=(4,), stride=(2,), padding=(1,))
+        )
+        (4): ModuleList(
+          (0): ConvTranspose1d(96, 48, kernel_size=(4,), stride=(2,), padding=(1,))
+        )
+        (5): ModuleList(
+          (0): ConvTranspose1d(48, 24, kernel_size=(4,), stride=(2,), padding=(1,))
+        )
+      )
+      (resblocks): ModuleList(
+        (0): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(768, 768, kernel_size=(3,), stride=(1,), padding=(1,))
+            (1): Conv1d(768, 768, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+            (2): Conv1d(768, 768, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(768, 768, kernel_size=(3,), stride=(1,), padding=(1,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (1): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(768, 768, kernel_size=(7,), stride=(1,), padding=(3,))
+            (1): Conv1d(768, 768, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+            (2): Conv1d(768, 768, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(768, 768, kernel_size=(7,), stride=(1,), padding=(3,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (2): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(768, 768, kernel_size=(11,), stride=(1,), padding=(5,))
+            (1): Conv1d(768, 768, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+            (2): Conv1d(768, 768, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(768, 768, kernel_size=(11,), stride=(1,), padding=(5,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (3): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(384, 384, kernel_size=(3,), stride=(1,), padding=(1,))
+            (1): Conv1d(384, 384, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+            (2): Conv1d(384, 384, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(384, 384, kernel_size=(3,), stride=(1,), padding=(1,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (4): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(384, 384, kernel_size=(7,), stride=(1,), padding=(3,))
+            (1): Conv1d(384, 384, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+            (2): Conv1d(384, 384, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(384, 384, kernel_size=(7,), stride=(1,), padding=(3,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (5): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(384, 384, kernel_size=(11,), stride=(1,), padding=(5,))
+            (1): Conv1d(384, 384, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+            (2): Conv1d(384, 384, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(384, 384, kernel_size=(11,), stride=(1,), padding=(5,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (6): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(192, 192, kernel_size=(3,), stride=(1,), padding=(1,))
+            (1): Conv1d(192, 192, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+            (2): Conv1d(192, 192, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(192, 192, kernel_size=(3,), stride=(1,), padding=(1,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (7): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(192, 192, kernel_size=(7,), stride=(1,), padding=(3,))
+            (1): Conv1d(192, 192, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+            (2): Conv1d(192, 192, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(192, 192, kernel_size=(7,), stride=(1,), padding=(3,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (8): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(192, 192, kernel_size=(11,), stride=(1,), padding=(5,))
+            (1): Conv1d(192, 192, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+            (2): Conv1d(192, 192, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(192, 192, kernel_size=(11,), stride=(1,), padding=(5,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (9): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(96, 96, kernel_size=(3,), stride=(1,), padding=(1,))
+            (1): Conv1d(96, 96, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+            (2): Conv1d(96, 96, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(96, 96, kernel_size=(3,), stride=(1,), padding=(1,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (10): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(96, 96, kernel_size=(7,), stride=(1,), padding=(3,))
+            (1): Conv1d(96, 96, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+            (2): Conv1d(96, 96, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(96, 96, kernel_size=(7,), stride=(1,), padding=(3,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (11): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(96, 96, kernel_size=(11,), stride=(1,), padding=(5,))
+            (1): Conv1d(96, 96, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+            (2): Conv1d(96, 96, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(96, 96, kernel_size=(11,), stride=(1,), padding=(5,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (12): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(48, 48, kernel_size=(3,), stride=(1,), padding=(1,))
+            (1): Conv1d(48, 48, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+            (2): Conv1d(48, 48, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(48, 48, kernel_size=(3,), stride=(1,), padding=(1,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (13): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(48, 48, kernel_size=(7,), stride=(1,), padding=(3,))
+            (1): Conv1d(48, 48, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+            (2): Conv1d(48, 48, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(48, 48, kernel_size=(7,), stride=(1,), padding=(3,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (14): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(48, 48, kernel_size=(11,), stride=(1,), padding=(5,))
+            (1): Conv1d(48, 48, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+            (2): Conv1d(48, 48, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(48, 48, kernel_size=(11,), stride=(1,), padding=(5,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (15): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(24, 24, kernel_size=(3,), stride=(1,), padding=(1,))
+            (1): Conv1d(24, 24, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+            (2): Conv1d(24, 24, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(24, 24, kernel_size=(3,), stride=(1,), padding=(1,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (16): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(24, 24, kernel_size=(7,), stride=(1,), padding=(3,))
+            (1): Conv1d(24, 24, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+            (2): Conv1d(24, 24, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(24, 24, kernel_size=(7,), stride=(1,), padding=(3,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+        (17): AMPBlock(
+          (convs1): ModuleList(
+            (0): Conv1d(24, 24, kernel_size=(11,), stride=(1,), padding=(5,))
+            (1): Conv1d(24, 24, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+            (2): Conv1d(24, 24, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+          )
+          (convs2): ModuleList(
+            (0-2): 3 x Conv1d(24, 24, kernel_size=(11,), stride=(1,), padding=(5,))
+          )
+          (activations): ModuleList(
+            (0-5): 6 x TorchActivation1d(
+              (act): SnakeBeta()
+              (upsample): UpSample1d()
+              (downsample): DownSample1d()
+            )
+          )
+        )
+      )
+      (activation_post): TorchActivation1d(
+        (act): SnakeBeta()
+        (upsample): UpSample1d()
+        (downsample): DownSample1d()
+      )
+      (conv_post): Conv1d(24, 1, kernel_size=(7,), stride=(1,), padding=(3,), bias=False)
+    )
+  )
+)
+/home/Userlist/kongzicheng/omni-critic-r1/ms-swift-main/swift/trainers/mixin.py:89: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(
+[INFO:swift] model_parameter_info: Qwen2_5OmniForConditionalGeneration: 5537.1206M Params (3397.1036M Trainable [61.3514%]), 1.9258M Buffers.
+/home/Userlist/kongzicheng/omni-critic-r1/ms-swift-main/swift/trainers/mixin.py:89: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(
+/home/Userlist/kongzicheng/omni-critic-r1/ms-swift-main/swift/trainers/mixin.py:89: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(
+/home/Userlist/kongzicheng/omni-critic-r1/ms-swift-main/swift/trainers/mixin.py:89: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(
+[INFO:swift] The logging file will be saved in: /home/Userlist/kongzicheng/omni-critic-r1/OmniCritic-SFT/outputs/v4-20250611-213834/logging.jsonl
+[INFO:swift] Successfully registered post_encode hook: ['Qwen2_5OmniForConditionalGeneration'].
+Train:   0%|          | 0/2295 [00:00<?, ?it/s]`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+[INFO:swift] use_logits_to_keep: False
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+Train:   0%|          | 1/2295 [00:55<35:16:53, 55.37s/it]                                                          {'loss': 1.1671437, 'token_acc': 0.7033543, 'grad_norm': 4.34079313, 'learning_rate': 3e-08, 'memory(GiB)': 18.96, 'train_speed(iter/s)': 0.010463, 'epoch': 0.0, 'global_step/max_steps': '1/2295', 'percentage': '0.04%', 'elapsed_time': '55s', 'remaining_time': '1d 11h 23m 47s'}
+Train:   0%|          | 1/2295 [00:55<35:16:53, 55.37s/it]Train:   0%|          | 1/2295 [00:55<35:16:53, 55.37s/it]Train:   0%|          | 2/2295 [01:37<30:23:40, 47.72s/it]Train:   0%|          | 3/2295 [02:13<26:46:53, 42.07s/it]Train:   0%|          | 4/2295 [02:47<24:57:12, 39.21s/it]Train:   0%|          | 5/2295 [03:23<24:00:26, 37.74s/it]                                                          {'loss': 1.21040511, 'token_acc': 0.71219136, 'grad_norm': 4.39737988, 'learning_rate': 1.3e-07, 'memory(GiB)': 19.85, 'train_speed(iter/s)': 0.020567, 'epoch': 0.01, 'global_step/max_steps': '5/2295', 'percentage': '0.22%', 'elapsed_time': '3m 23s', 'remaining_time': '1d 1h 49m 55s'}
+Train:   0%|          | 5/2295 [03:23<24:00:26, 37.74s/it]Train:   0%|          | 5/2295 [03:23<24:00:26, 37.74s/it]Train:   0%|          | 6/2295 [03:57<23:17:05, 36.62s/it]Train:   0%|          | 7/2295 [04:32<22:55:32, 36.07s/it]Train:   0%|          | 8/2295 [05:06<22:34:54, 35.55s/it]Train:   0%|          | 9/2295 [05:41<22:25:06, 35.30s/it]Train:   0%|          | 10/2295 [06:17<22:28:33, 35.41s/it]                                                           {'loss': 1.20108566, 'token_acc': 0.69977925, 'grad_norm': 4.79223633, 'learning_rate': 2.6e-07, 'memory(GiB)': 19.85, 'train_speed(iter/s)': 0.023961, 'epoch': 0.01, 'global_step/max_steps': '10/2295', 'percentage': '0.44%', 'elapsed_time': '6m 17s', 'remaining_time': '23h 56m 52s'}
+Train:   0%|          | 10/2295 [06:17<22:28:33, 35.41s/it]Train:   0%|          | 10/2295 [06:17<22:28:33, 35.41s/it]
