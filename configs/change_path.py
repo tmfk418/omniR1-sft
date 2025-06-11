@@ -26,8 +26,8 @@ def modify_paths(jsonl_file, base_path="/new/path/to/files"):
             # 修改视频路径
             if "video" in data:
                 video_path = data["video"]
-                if video_path.startswith("/home/Userlist/kongzicheng"):
-                    new_video_path = video_path.replace("/home/Userlist/kongzicheng", base_path)
+                if video_path.startswith("//home/kongzicheng"):
+                    new_video_path = video_path.replace("/home/kongzicheng", base_path)
                     data["video"] = new_video_path
             
             # 写回修改后的内容
