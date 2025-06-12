@@ -12,7 +12,6 @@
 
 首先，克隆整个仓库，并包含所有分支。
 
-
 git clone --branch main https://github.com/tmfk418/omniR1-sft.git
 
 cd omniR1-sft
@@ -23,7 +22,7 @@ git checkout master1  # 选择用于微调的框架分支
 
 git checkout master   # 选择包含代码和jsonl数据的分支
 
-##步骤 2: 设置虚拟环境
+## 步骤 2: 设置虚拟环境
 
 接下来，您需要创建一个虚拟环境，并安装必要的依赖项。
 
@@ -37,7 +36,7 @@ source sft_env/bin/activate
 
 pip install -r requirements.txt
 
-##步骤 3: 下载数据集
+## 步骤 3: 下载数据集
 
 需要下载的数据集托管在 Hugging Face 上。可以使用 huggingface_hub 库进行下载。
 
@@ -57,7 +56,7 @@ video_dataset = hf_hub_download("TMFK/omnir1-dataset", "C:\Users\tmfk1\video\vid
 
 audio_dataset = hf_hub_download("TMFK/omnir1-dataset", "Clotho-AQA dataset.zip")
 
-##步骤 4: 更新数据集路径
+## 步骤 4: 更新数据集路径
 
 运行以下脚本来更新音频和视频路径：
 
@@ -67,7 +66,7 @@ python configs/change_path.py
 
 确保路径与您下载的文件相匹配。脚本会根据指定的基础路径更新 JSONL 文件中的音频和视频路径。
 
-##步骤5：运行微调代码
+## 步骤5：运行微调代码
 
 bash scripts/sft_multi.sh
 
