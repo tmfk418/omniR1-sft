@@ -5,6 +5,7 @@
 这个仓库包含了使用 Swift 框架和自定义数据集进行多模态模型微调的代码。实验由以下几个部分组成：
 
 - **代码仓库**：包含了训练框架 (`ms-swift-main`) 和 OmniCritic-SFT 项目文件。
+- 
 - **数据集**：包含音频、视频和图像数据集，这些数据集已经上传到 Hugging Face，用于训练模型。
 
 ## 步骤 1: 克隆所有分支
@@ -12,46 +13,67 @@
 首先，克隆整个仓库，并包含所有分支。
 
 # 克隆仓库并拉取所有分支
+
 git clone --branch main https://github.com/tmfk418/omniR1-sft.git
+
 cd omniR1-sft
+
 git fetch --all
+
 git checkout master1  # 选择用于微调的框架分支
+
 git checkout master   # 选择包含代码和jsonl数据的分支
 
 步骤 2: 设置虚拟环境
+
 接下来，您需要创建一个虚拟环境，并安装必要的依赖项。
 
 python3 -m venv sft_env
+
 激活虚拟环境：
 
 在 Linux/macOS 上：
+
 source sft_env/bin/activate
 
 pip install -r requirements.txt
 
 步骤 3: 下载数据集
+
 需要下载的数据集托管在 Hugging Face 上。可以使用 huggingface_hub 库进行下载。
 
 安装 huggingface_hub 库：
+
 pip install huggingface_hub
+
 下载数据集：
+
 from huggingface_hub import hf_hub_download
 
 # 下载音频、视频和图像数据集
+
 image_dataset = hf_hub_download("TMFK/omnir1-dataset", "local_path")
+
 video_dataset = hf_hub_download("TMFK/omnir1-dataset", "C:\Users\tmfk1\video\video.zip")
+
 audio_dataset = hf_hub_download("TMFK/omnir1-dataset", "Clotho-AQA dataset.zip")
 
 步骤 4: 更新数据集路径
+
 运行以下脚本来更新音频和视频路径：
 
 # 更新路径
+
 python configs/change_path.py
+
 确保路径与您下载的文件相匹配。脚本会根据指定的基础路径更新 JSONL 文件中的音频和视频路径。
 
 步骤5：运行微调代码
+
 bash scripts/sft_multi.sh
+
 注意修改里面的所有路径
+
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5
 export FPS=1
 export FPS_MAX_FRAMES=35
